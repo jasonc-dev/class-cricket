@@ -1,0 +1,19 @@
+extends base
+
+block content 
+    h1(style="color: black; padding: 50px 0 0 50px;") Your courses...
+    
+    .card-container 
+      each course in courses
+        .card 
+          .card__header
+            .card__picture 
+              .card__picture-overlay &nbsp;
+              img.card__picture-img(src=`/img/courses/${course.imageCover}`, alt=`${course.courseTitle}`)
+
+          .card__details 
+            h4.card__sub-heading= `${course.courseSummary}`
+            p.card__text= course.courseDescription 
+
+          .card__footer 
+              a.btn.btn--blue.btn--small(href=`/course/${course.slug}/videos`) GO TO VIDEOS

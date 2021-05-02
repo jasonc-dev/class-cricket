@@ -1,0 +1,32 @@
+extends base
+
+block content
+  section#courses
+    .course-video-example
+      h1.video-title 🏏 How we can help you at Class Cricket?
+      .video-box
+        iframe(src="https://www.youtube.com/embed/7WlFMeYpfiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        
+    .card-container 
+      each course in courses
+        .card 
+          .card__header
+            .card__picture 
+              .card__picture-overlay &nbsp;
+              img.card__picture-img(src=`/img/courses/${course.imageCover}`, alt=`${course.courseTitle}`)
+
+          .card__details 
+            h4.card__sub-heading= `${course.courseSummary}`
+            p.card__text= course.courseDescription 
+
+          .card__footer 
+            p 
+              span.card__footer-value= `Price: £${course.price}`
+            p 
+              span.card__footer-value= `Difficulty: Beginner`
+            if user 
+              a.btn.btn--blue.btn--small(href=`/course/details/${course.slug}#book-course`) Get course 
+            else
+              a.btn.btn--blue.btn--small(href=`/login-form`) Log in
+            a.btn.btn--white.btn--small(href=`/course/details/${course.slug}`) Details
+    

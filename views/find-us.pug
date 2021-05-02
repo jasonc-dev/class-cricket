@@ -1,0 +1,59 @@
+extends base
+
+block content
+    .findus-heading 
+      h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae totam adipisci, id corrupti eos culpa alias sed optio ullam eveniet?
+
+    section#findus
+        h1.findus-overview Where you can find us?
+        .findus-info
+            .findus-box
+                p.findus-flag 🇬🇧
+                h4 Mock Town
+                p Mock Cricket Club. Mock Road BL8 1AA
+                hr
+                h3 Main contact: John Smith 
+                h4 Role: Head Coach
+                p Number: 07772220000
+                p Email: coach1@classcricket.com
+            .findus-box
+                p.findus-flag 🇮🇳
+                h4 Mock Town
+                p Mock Cricket Club. Mock Road BL8 1AA
+                hr
+                h3 Main contact: John Smith 
+                h4 Role: Head Coach
+                p Number: 07772220000
+                p Email: coach1@classcricket.com
+        
+    section#contact-form
+        .wrapper__contact-form
+            .contact-form-content 
+                h1 CONTACT FORM 
+                p Cant find what youre looking for? send us a message below! 
+
+                form(action="POST").contact-form 
+                    .top-form
+                        .inner-form 
+                            input(type="text" placeholder="name*")
+                        .inner-form 
+                            input(type="text" placeholder="email*")
+                        .inner-form 
+                            input(type="text" placeholder="phone*")
+                        
+                    .middle-form
+                        .inner-form 
+                            input(type="text" placeholder="location*")
+                        .inner-form 
+                            input(type="text" placeholder="skill level*")
+                        .inner-form 
+                            input(type="text" placeholder="Interested in*")
+
+                    .bottom-form
+                        .inner-form 
+                            textarea(name="" placeholder="message*")
+                    button.contact-btn Send
+
+    section#findus-map
+      .map-content
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18934.49697901652!2d-2.3486961315035093!3d53.61465402297796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487ba460dba0dd95%3A0x6fe6851536b4862a!2sWalshaw%20Sports%20Club!5e0!3m2!1sen!2suk!4v1617829864472!5m2!1sen!2suk" style="border:0;" loading="lazy")

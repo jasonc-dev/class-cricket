@@ -1,0 +1,101 @@
+extends base
+
+block content
+    section#title
+        .container-title
+            h1 Welcome to class Cricket!
+            a.btn.btn--blue.btn--small(href="/courses") Get Started
+
+    section#overview
+        .section-overview-container
+            .section-overview
+                h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    
+    section#services 
+        .wrapper-services 
+            .content__logo 
+                img(src="img/become-best-white.png")
+            .content__options 
+                .service--text
+                    h1 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    hr.hr__service
+                .service--options
+                    .service
+                        img(src="img/cc-logo-green.png")
+                        h5 COACHING
+                        button FIND OUT MORE
+                    .service
+                        img(src="img/cc-logo-green.png")
+                        h5 CONTENT
+                        button FIND OUT MORE
+                    .service
+                        img(src="img/cc-logo-green.png")
+                        h5 EVENTS
+                        button FIND OUT MORE
+
+    section#newsletter 
+        .newsletter--box
+            .newsletter--content
+                i.far.fa-newspaper
+                .newsletter--text
+                    h1 KEEP UP TO DATE WITH OUR NEWSLETTER!
+                .overview__button
+                    button SIGN UP
+
+    section#contact-form
+        .wrapper__contact-form
+            .contact-form-content 
+                h1 CONTACT FORM 
+                p Cant find what youre looking for? send us a message below! 
+
+                form(action="POST").contact-form 
+                    .top-form
+                        .inner-form 
+                            input(type="text" placeholder="name*")
+                        .inner-form 
+                            input(type="text" placeholder="email*")
+                        .inner-form 
+                            input(type="text" placeholder="phone*")
+                        
+                    .middle-form
+                        .inner-form 
+                            input(type="text" placeholder="location*")
+                        .inner-form 
+                            input(type="text" placeholder="skill level*")
+                        .inner-form 
+                            input(type="text" placeholder="Interested in*")
+
+                    .bottom-form
+                        .inner-form 
+                            textarea(name="" placeholder="message*")
+
+                    button.contact-btn Send
+
+    section#testimonial-home
+        h1 What do our customers think?
+        .testimonial-info
+            .testimonial-box
+                img.testimonial-img(src="img/default-icon.jpeg")
+                h3.testimonial-name John Smith
+                h5.testimonial-title Parent
+                hr
+                p.testimonial-text "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic dolorem doloremque voluptatibus quibusdam ab culpa ipsum, nulla recusandae in consequatur."
+            .testimonial-box
+                img.testimonial-img(src="img/default-icon.jpeg")
+                h3.testimonial-name Liam Jones
+                h5.testimonial-title Cricket Player at Leicester CC
+                hr
+                p.testimonial-text "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit distinctio alias nobis libero cupiditate sequi sapiente autem aut corrupti maxime voluptates, officia illo odio laborum hic atque odit quibusdam. Ut."
+            .testimonial-box
+                img.testimonial-img(src="img/default-icon.jpeg")
+                h3.testimonial-name Anna Lowe
+                h5.testimonial-title Cricket Administrator at Highbury CC
+                hr
+                p.testimonial-text "Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eligendi cupiditate esse aut sunt, est, illo optio beatae dolorem, dolor voluptatem ullam facere. Nesciunt praesentium esse deserunt incidunt eligendi necessitatibus. Soluta, ullam nam repudiandae quia temporibus voluptate vitae ea minima."
+
+
+    
+
+
+
+        

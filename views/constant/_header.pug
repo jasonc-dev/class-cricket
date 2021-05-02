@@ -1,0 +1,46 @@
+nav.nav.flex-row
+    .nav-menu 
+        .nav-brand
+            img.img--size(src='/img/md-logo-navy.png' alt='Class Cricket logo')
+    .toggle-collapse 
+        .toggle-icons.text-black
+            span: i.fas.fa-bars
+    div
+        ul.nav-items.flex-row
+            if user
+                li.nav-link
+                    a.text-black(href="/") HOME
+                li.nav-link
+                    a.text-black(href="/find-us") FIND US
+                li.nav-link
+                    a.text-black(href="/coaching-team") COACHING TEAM
+                li.nav-link
+                    a.text-black(href="/courses") COURSES
+                li.nav-link
+                    a.text-black(href="/help-me-decide") HELP ME DECIDE
+                li.nav-link
+                    a.text-black(href="/my-courses") VIDEO
+                li.nav-link
+                    a.text-black.nav__el--logout(style="color: rgb(128, 147, 228)") LOG OUT
+            else
+                li.nav-link
+                    a.text-black(href="/") HOME
+                li.nav-link
+                    a.text-black(href="/find-us") FIND US
+                li.nav-link
+                    a.text-black(href="/coaching-team") COACHING TEAM
+                li.nav-link
+                    a.text-black(href="/courses") COURSES
+                li.nav-link
+                    a.text-black(href="/help-me-decide") HELP ME DECIDE
+                li.nav-link
+                    a.text-black(href="/login-form" style="color: rgb(128, 147, 228)") LOG IN
+                li.nav-link
+                    a.text-black(href="/signup-form" style="color: rgb(122, 201, 119);") SIGN UP
+
+    .social.text-black
+        i.fab.fa-facebook-f 
+        i.fab.fa-twitter
+        i.fab.fa-instagram
+
+
