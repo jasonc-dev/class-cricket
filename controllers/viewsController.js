@@ -2,6 +2,7 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Course = require('../models/courseModel');
 const Subscription = require('../models/subscriptionModel');
+const Video = require('../models/videoModel');
 
 exports.getCourse = catchAsync(async (req, res, next) => {
   // 1. Get the data, for the requested course
@@ -32,7 +33,28 @@ exports.getMyCourses = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getCourseVideos = async (req, res, next) => {
+exports.getVideoPlayer = catchAsync(async (req, res, next) => {
+  const course = await Course.findOne({ slug: req.params.courseSlug });
+  if (!course) {
+    return next(new AppError('There is no course with that name.', 404));
+  }
+  const courseIDsFromUser = req.user.subscriptions.map((el) => el.course.id);
+  if (!courseIDsFromUser.includes(course.id)) {
+    return next(new AppError('You are not registered for this course', 404));
+  }
+
+  const video = await Video.findOne({ slug: req.params.videoSlug });
+  if (!video) {
+    return next(new AppError('There is no video with that name', 404));
+  }
+
+  res.status(200).render('video-player', {
+    title: `${video.videoTitle}`,
+    video,
+  });
+});
+
+exports.getCourseVideos = catchAsync(async (req, res, next) => {
   const course = await Course.findOne({ slug: req.params.slug }).populate({
     path: 'videos',
     fields: 'video for course',
@@ -51,7 +73,7 @@ exports.getCourseVideos = async (req, res, next) => {
     title: `${course.courseTitle} videos`,
     course,
   });
-};
+});
 
 exports.getLandingPage = async (req, res) => {
   res.status(200).render('homepage', {

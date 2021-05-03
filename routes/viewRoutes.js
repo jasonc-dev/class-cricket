@@ -15,6 +15,13 @@ router.get(
 );
 
 router.get(
+  '/course/:courseSlug/videos/:videoSlug',
+  authController.protect,
+  viewsController.getVideoPlayer
+);
+
+router.get(
+  // TODO - resolve so it takes user to courses once
   '/',
   subscriptionController.createSubscriptionCheckout,
   authController.isLoggedIn,

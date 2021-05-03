@@ -1004,22 +1004,58 @@ h1 {
   width: fit-content;
 }
 
-/* ======================= VIDEO PLATFORM ========================= */
+/* ======================= VIDEO VIDEOS PAGE ========================= */
 
-#video-platform h1,
-#video-platform p,
-#video-platform hr {
+#video-overview h1 {
   color: #0f1225;
 }
 
-#video-platform .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 5rem 10rem;
+#video-overview .video-heading {
+  padding: 2rem 0;
+  text-align: center;
 }
 
-#video-platform .row {
-  padding: 25px;
+#video-overview .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#video-overview .video-box {
+  padding: 2rem;
+}
+
+#video-overview .video-box img {
+  width: 15rem;
+  height: 15rem;
+}
+
+/* ======================= VIDEO PLAYER ========================= */
+
+#video-player h1 {
+  color: #0f1225;
+  text-align: center;
+}
+
+#video-player .video-title {
+  padding-top: 2rem;
+}
+
+#video-player hr {
+  width: 30%;
+  margin: 1.5rem auto;
+}
+
+#video-player .video-box {
+  width: 50rem;
+  height: auto;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ======================= FOOTER ========================= */

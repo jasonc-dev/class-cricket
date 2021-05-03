@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 
 const videoSchema = mongoose.Schema(
   {
@@ -27,6 +28,7 @@ const videoSchema = mongoose.Schema(
       ref: 'Course',
       required: [true, 'Video must belong to a course'],
     },
+    slug: String,
     createdAt: {
       type: Date,
       default: Date.now(),
@@ -38,6 +40,11 @@ const videoSchema = mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
+
+videoSchema.pre('save', function (next) {
+  this.slug = slugify(this.videoTitle, { lower: true });
+  next();
+});
 
 const Video = mongoose.model('Video', videoSchema);
 

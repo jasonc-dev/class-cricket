@@ -1,12 +1,16 @@
 extends base
 
-block content 
-  main#video-player
-    .container 
-      .row
-        .col-lg
-          h1 Video Title 
-          hr
-          p video description 
-          hr
-          video(id="videoPlayer" controls style="width: 100%" poster="./thumbnails/globe.png" src="./videos/example.mp4") 
+block content
+  if user
+    main#video-player
+      if video
+        h1.video-title= `${video.videoTitle}`
+        hr
+        .video-box
+          video(id="videoPlayer" controls style="width: 100%" poster=`/thumbnails/${video.thumbnail}.jpeg` src=`/videos/${video.filename}.mp4`) 
+        hr
+        p= `${video.videoDescription}...`
+      else 
+        h1 please purchase this course to access content
+  else 
+    h1 Please log in to access this page
