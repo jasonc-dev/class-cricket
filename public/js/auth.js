@@ -16,7 +16,7 @@ export const signup = async (email, password, passwordConfirm) => {
     if (res.data.status === 'success') {
       showAlert('success', 'signed up successfully');
       window.setTimeout(() => {
-        location.assign('/video-platform');
+        location.assign('/courses');
       }, 1500);
     }
   } catch (err) {
