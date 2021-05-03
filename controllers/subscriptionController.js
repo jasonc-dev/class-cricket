@@ -20,7 +20,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       {
         name: `${course.courseTitle} Course`,
         description: course.courseSummary,
-        images: [`http://localhost:3000/img/courses/${course.imageCover}`],
+        images: [`/img/courses/${course.imageCover}`],
         amount: course.price * 100,
         currency: 'gbp',
         quantity: 1,
