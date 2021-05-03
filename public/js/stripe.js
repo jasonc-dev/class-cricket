@@ -11,14 +11,12 @@ export const bookCourse = async (courseId) => {
     const session = await axios(
       `/api/v1/subscriptions/checkout-session/${courseId}`
     );
-    console.log(session);
 
     // 2) Create checkout form + charge credit card
     await stripe.redirectToCheckout({
       sessionId: session.data.session.id,
     });
   } catch (err) {
-    console.log(err);
     showAlert('error', err);
   }
 };
