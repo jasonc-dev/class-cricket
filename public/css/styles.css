@@ -891,7 +891,8 @@ h1 {
 .card-container {
   max-width: 120rem;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(3, 1fr);
   gap: 7rem;
   padding: 50px;
@@ -922,8 +923,8 @@ h1 {
 
 .card__picture {
   position: relative;
-  /* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
-  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%); */
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
   height: 15rem;
 }
 
@@ -953,7 +954,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1.5rem;
-  /* column-gap: 10rem; */
+  column-gap: 10rem;
   padding: 1.5rem 2rem;
 }
 
@@ -1002,6 +1003,20 @@ h1 {
 
 .card__footer p {
   width: fit-content;
+}
+
+@media only screen and (max-width: 973px) {
+  .card {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  .card__footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 
 /* ======================= VIDEO VIDEOS PAGE ========================= */
