@@ -899,9 +899,10 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
   gap: 7rem;
   padding: 50px;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
