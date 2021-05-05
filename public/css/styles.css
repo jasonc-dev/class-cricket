@@ -88,6 +88,12 @@ body {
   background-color: #fff;
 }
 
+.btn--light {
+  background-color: #fff;
+  border: 2px solid #8a8a8a !important;
+  color: #8a8a8a;
+}
+
 .btn--small {
   padding: 1rem 1.5rem !important;
   font-size: 1rem !important;
