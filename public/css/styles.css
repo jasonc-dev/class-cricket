@@ -90,13 +90,16 @@ body {
 
 .btn--light {
   background-color: #fff;
-  border: 2px solid #8a8a8a !important;
   color: #8a8a8a;
 }
 
 .btn--small {
   padding: 1rem 1.5rem !important;
   font-size: 1rem !important;
+}
+
+.video-container {
+  display: flex;
 }
 
 /* ==================== NAVBAR ================== */
@@ -743,13 +746,19 @@ h1 {
   color: var(--dark);
 }
 
-.course-video-example .video-box {
-  margin-bottom: 5rem;
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
 }
 
-.course-video-example .video-box iframe {
-  width: 52vw;
-  height: 60vh;
+.iframe-container iframe {
+  border: 0;
+  height: 60%;
+  left: 20%;
+  position: absolute;
+  top: 0;
+  width: 60%;
 }
 
 .course-information {

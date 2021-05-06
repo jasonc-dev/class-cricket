@@ -6,8 +6,9 @@ block content
       if video
         h1.video-title= `${video.videoTitle}`
         hr
-        .video-box
-          video(id="videoPlayer" controls controlsList="nodownload" style="width: 100%" poster=`/thumbnails/${video.thumbnail}.jpeg` src=`/videos/${video.filename}.mp4`) 
+        .video-container
+          .video-box
+            video(id="videoPlayer" controls controlsList="nodownload" style="width: 100%" poster=`/thumbnails/${video.thumbnail}.jpeg` src=`/videos/${video.filename}.mp4`) 
         hr
         p= `${video.videoDescription}...`
       else 
