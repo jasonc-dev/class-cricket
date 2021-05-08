@@ -655,54 +655,48 @@ h1 {
 
 /* ======================= COACHING TEAM ========================= */
 
-#coachingteam .coachingteam-overview {
-  margin: 8rem 10rem 2rem;
-  color: var(--dark);
-  max-width: 100%;
+#coachingteam h1 {
+  color: #0f1225;
 }
 
-#coachingteam .coachingteam-overview h1 {
-  color: var(--dark);
+#coachingteam hr {
+  width: 25%;
 }
 
-#coachingteam .coachingteam-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  max-width: 100%;
-  margin-top: 25px;
+.coachingteam-overview,
+.coaching-country {
+  padding: 1rem 5rem;
+  text-align: center;
 }
 
-#coachingteam .coachingteam-member {
-  height: 25vw;
+.coachingteam-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-#coachingteam .coachingteam-wrapper img {
-  height: 15vw;
+.coaching-team {
+  width: 20rem;
+  padding: 0 2rem;
 }
 
-#coachingteam .coachingteam-wrapper p {
-  margin-right: 40px;
+.coaching-member__img img {
+  width: 100%;
+  height: auto;
 }
 
-#coachingteam .coachingteam-join {
+.coachingteam-join {
   background: var(--green);
+  display: flexbox;
 }
 
-#coachingteam .coachingteam-joinus {
-  background: var(--green);
-  padding: 5rem 10rem;
+.coachingteam-joinus {
+  padding: 5rem 10%;
 }
 
-@media screen and (max-width: 767px) {
-  #coachingteam .coachingteam-wrapper {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 564px) {
-  #coachingteam .coachingteam-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+.coachingteam-joinus h2 {
+  color: #f1f1f1;
 }
 
 /* ======================= COURSES ========================= */
@@ -810,7 +804,7 @@ h1 {
   margin-top: 0px;
 }
 
-/* =========== LOGIN ============= */
+/* =========== AUTH ============= */
 
 #login,
 #register {
@@ -852,9 +846,10 @@ h1 {
   letter-spacing: 0.1rem;
   line-height: 1.3;
   display: inline-block;
-  margin-bottom: 3.5rem !important;
+  margin-bottom: 3.5rem;
 }
 
+#register .form__group,
 #login .form__group {
   margin-bottom: 1.5rem;
 }
@@ -899,6 +894,40 @@ h1 {
 
 .register-form .form__group:nth-child(1n + 2) {
   padding-top: 20px;
+}
+
+@media only screen and (max-width: 560px) {
+  #login {
+    padding: 3rem 0.5rem;
+    max-width: 90%;
+  }
+
+  .form__input {
+    font-size: 0.5rem;
+    padding: 1rem 0.6rem;
+    width: 100%;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 2px;
+  }
+
+  .login-heading {
+    font-size: 1rem !important;
+  }
+
+  #login .login-form,
+  #register .register-form {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0.5rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  #login .form__group .btn {
+    font-size: 0.6rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4rem;
+  }
 }
 
 /* ============= Course Cards ================== */
