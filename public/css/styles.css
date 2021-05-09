@@ -128,7 +128,7 @@ nav {
   position: relative;
   justify-content: space-between;
   height: 0rem;
-  min-height: 8.5vh;
+  min-height: 4rem;
   overflow: hidden;
   transition: height 1s cubic-bezier(0, 0, 0.31, 1.27);
   align-items: center;
@@ -849,7 +849,6 @@ h1 {
   margin-bottom: 3.5rem;
 }
 
-#register .form__group,
 #login .form__group {
   margin-bottom: 1.5rem;
 }
@@ -897,13 +896,13 @@ h1 {
 }
 
 @media only screen and (max-width: 560px) {
-  #login {
+  #login,
+  #register {
     padding: 3rem 0.5rem;
-    max-width: 90%;
   }
 
   .form__input {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 1rem 0.6rem;
     width: 100%;
     border-top: 1px solid transparent;
@@ -911,8 +910,10 @@ h1 {
     border-radius: 2px;
   }
 
-  .login-heading {
+  #login .login-heading,
+  #register .register-heading {
     font-size: 1rem !important;
+    margin-bottom: 1rem !important;
   }
 
   #login .login-form,
@@ -923,8 +924,9 @@ h1 {
     border-radius: 2px;
   }
 
-  #login .form__group .btn {
-    font-size: 0.6rem;
+  #login .btn,
+  #register .btn {
+    font-size: 1rem;
     padding: 0.7rem 1.5rem;
     border-radius: 4rem;
   }
