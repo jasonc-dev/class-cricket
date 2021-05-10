@@ -18,6 +18,8 @@ const videoRouter = require('./routes/videoRoutes');
 
 const app = express();
 
+app.enable('trust proxy'); // for heroku as herkou is a proxy - investigate when adding to server
+
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
