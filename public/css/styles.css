@@ -102,6 +102,13 @@ body {
   display: flex;
 }
 
+.text-container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 50px 20px;
+}
+
 /* ==================== NAVBAR ================== */
 
 .img--size {
@@ -246,17 +253,6 @@ h1 {
 }
 
 /* ======================= OVERVIEW ========================= */
-
-.section-overview-container {
-  margin: 100px;
-}
-
-@media only screen and (max-width: 425px) {
-  .section-overview-container {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
 
 /* ======================= SERVICES ========================= */
 
@@ -571,14 +567,6 @@ h1 {
 
 /* ======================= FIND US ========================= */
 
-.findus-heading {
-  color: var(--dark);
-  width: auto;
-  padding: 50px 50px 70px;
-  display: grid;
-  grid-template-columns: 50%;
-}
-
 #findus {
   background-color: var(--white);
   padding-bottom: 15px;
@@ -686,16 +674,8 @@ h1 {
   height: auto;
 }
 
-.coachingteam-join {
-  background: var(--green);
-  display: flexbox;
-}
-
 .coachingteam-joinus {
-  padding: 5rem 10%;
-}
-
-.coachingteam-joinus h2 {
+  background: var(--green);
   color: #f1f1f1;
 }
 
