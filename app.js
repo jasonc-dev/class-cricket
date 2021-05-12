@@ -24,8 +24,6 @@ app.enable('trust proxy'); // for heroku as herkou is a proxy - investigate when
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-app.locals.basedir = path.join(__dirname, 'views');
-
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
